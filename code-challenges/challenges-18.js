@@ -83,7 +83,24 @@ const wordLetters = (str1, str2) => {
 
 const targetIndex = (arr, int) => {
     // write your code here
+    let k=0;
+  for (let i=0;i<arr.length;i++){
+    if(int==arr[i]){
+      
+      k=i
+      break;
+
+    }else if(int > Math.max(...arr) ) {
+      k=(arr.length)
+      break;
+    
+    }else if(int>arr[i]){
+      k=i+1
+    }
+  }
+  return (k)
 }
+
 // -------------------------------------------------------------------------------------------------------
 
 module.exports = { wordLength, wordLetters, targetIndex };
